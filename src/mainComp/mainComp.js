@@ -9,6 +9,7 @@ import "./mainComp.css";
 const MainComp = props => {
   const [currValue, setCurrValue] = useState("");
 
+  //BINDING INPUT VALUE
   const someonesTyping = async e => {
     e.preventDefault();
     const value = e.target.value;
@@ -19,6 +20,7 @@ const MainComp = props => {
     }
   };
 
+  //AUTOCOMPLETE FUNC
   const fillItUp = value => {
     setCurrValue(value);
   };

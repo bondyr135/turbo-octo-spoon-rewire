@@ -12,9 +12,9 @@ import "./searchBar.css";
 const SearchBar = props => {
   const [ableSugg, setAbleSugg] = useState(false);
 
+  //CHECKING IF THE INPUT IS LONGRER THAN 2
   const enableSuggestions = e => {
     e.preventDefault();
-
     if (props.value.length < 2) {
       return setAbleSugg(false);
     } else {
@@ -22,6 +22,7 @@ const SearchBar = props => {
     }
   };
 
+  //CUSTOM HOOK!
   const [suggestions, longEnough] = useAutoComp(props.value, ableSugg);
 
   return (
