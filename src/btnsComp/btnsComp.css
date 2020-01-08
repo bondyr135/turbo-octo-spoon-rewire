@@ -1,0 +1,58 @@
+.btns_unit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "search delete";
+  height: 50px;
+  max-height: 50px;
+  width: 70px;
+}
+
+.btns_unit button {
+  font-weight: bold;
+  background-color: #fff;
+  font-size: 17px;
+}
+
+/* SEARCH BTN */
+.search_btn {
+  grid-template: "search";
+  border: none;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #444444;
+}
+
+.search_btn:enabled {
+  background-image: radial-gradient(rgb(40, 206, 40), white);
+  color: rgb(2, 99, 2);
+  cursor: pointer;
+}
+
+/* DELETE BTN */
+.delete_btn {
+  border: none;
+  grid-template: "delete";
+  border-radius: 0 4px 4px 0;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #444444;
+}
+
+.delete_btn:enabled {
+  background-image: radial-gradient(rgb(250, 89, 89), white);
+  color: rgb(136, 4, 48);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .btns_unit {
+    height: 45px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .btns_unit {
+    height: 45px;
+    font-size: 12px;
+  }
+}
